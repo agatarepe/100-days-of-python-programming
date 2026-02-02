@@ -1,0 +1,525 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPIN3vHSQwQBf1vZX6VSDDV",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/agatarepe/100-days-of-python-programming/blob/main/Week%204\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def greet_user():\n",
+        "  print(\"Please enter your name\")\n",
+        "  name = input()\n",
+        "  print(\"Hello\", name)\n",
+        "\n",
+        "# Call to function\n",
+        "greet_user()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PmTCAg67dp52",
+        "outputId": "7d16a741-6d3b-4ddf-e8e8-991e7da69cf5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Please enter your name\n",
+            "Agata\n",
+            "Hello Agata\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def greet_user():\n",
+        "  print(\"Please enter your name\")\n",
+        "  name = input()\n",
+        "  print(\"Hello\", name)\n",
+        "\n",
+        "# Calls to the function\n",
+        "greet_user()\n",
+        "greet_user()\n",
+        "greet_user()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wVVUX1zGdynJ",
+        "outputId": "8f5cf045-5811-4272-ecf4-3057dfa95913"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Please enter your name\n",
+            "Agata\n",
+            "Hello Agata\n",
+            "Please enter your name\n",
+            "Agata\n",
+            "Hello Agata\n",
+            "Please enter your name\n",
+            "Agata\n",
+            "Hello Agata\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Start by creating a new python file custom_functions.py and storing the file in the week4 folder you created previously.\n",
+        "\n",
+        "# The program should start by defining a function that has the name listen and which takes 0 parameters.\n",
+        "# The function should do the following:\n",
+        "#     Ask the user to enter a word representing a sound.\n",
+        "#     Display the message \"That was a loud\" followed by the word entered by user and an exclamation mark.\n",
+        "# Finally, the program should contain a call to your function listen\n",
+        "\n",
+        "def list ():\n",
+        "  print(\"enter the sound\")\n",
+        "  sound = input()\n",
+        "  print(\"That was a loud\", sound, \"!\")\n",
+        "\n",
+        "list()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nBsBoaqOd-40",
+        "outputId": "8f5d48bf-fef5-4a33-92b6-d958ef49d6c6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the sound\n",
+            "pierd\n",
+            "That was a loud pierd !\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Lets add another function to the text based adventure game.\n",
+        "\n",
+        "# The program should start by defining a function that has the name identify and which takes 0 parameters.\n",
+        "# The function should do the following:\n",
+        "#     Ask the user to enter a word representing what they see.\n",
+        "#     Read the user's response.\n",
+        "#     If the user's response is \"a large boulder\" then the message \"It's time to run!\" should be displayed.\n",
+        "#     Otherwise the message \"We will be fine.\" should be displayed.\n",
+        "# Finally, the program should contain a call to your identify function.\n",
+        "\n",
+        "def identify():\n",
+        "  print(\"Enter what you see\")\n",
+        "  see = input()\n",
+        "  if see == 'a large boulder':\n",
+        "    print(\"It's time to run\")\n",
+        "  else:\n",
+        "    print(\"We will be fine\")\n",
+        "identify()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PuXSBOw8eHQk",
+        "outputId": "c9939e46-f1d6-4800-8c45-55a0b2369091"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter what you see\n",
+            "a large boulder\n",
+            "It's time to run\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# We wish to add another function to the game that will help the player find a way to escape the boulder in the cave.\n",
+        "\n",
+        "# The program should start by defining a function that has the name escape_by and which takes 1 parameter named plan.\n",
+        "# The function should do the following:\n",
+        "#     If the parameter plan has the value \"jumping over\" then the message \"We cannot escape that way! The boulder is too big!\" should be displayed.\n",
+        "#    Otherwise, if the parameter plan has the value \"running around\" then the message \"We cannot escape that way! The boulder is moving too fast!\" should be displayed.\n",
+        "#     Otherwise, if the parameter plan has the value \"cross bridge ahead\" then the message \"That might just work! Let's go!\" should be displayed.\n",
+        "#     Otherwise the message \"We cannot escape that way! The boulder is in the way!\" should be displayed.\n",
+        "# Finally, the program should contain three calls to your escape function as follows:\n",
+        "\n",
+        "# escape_by(\"jumping over\")\n",
+        "# escape_by(\"running around\")\n",
+        "# escape_by(\"cross bridge ahead\")\n",
+        "\n",
+        "\n",
+        "def escape_by(plan):\n",
+        "  plan = input()\n",
+        "  if (plan) == \"jumping over\":\n",
+        "    print(\"We cannot escape that way ! The boulder is too big !\")\n",
+        "  elif (plan) == \"running around\":\n",
+        "    print(\"We cannot escape that way ! The boulder is moving too fast !\")\n",
+        "  elif (plan) == \"cross bridge ahead\":\n",
+        "    print(\"That might just work ! Let's go !\")\n",
+        "  else:\n",
+        "    print(\"We cannot escape that way ! The boulder is in the way !\")\n",
+        "\n",
+        "escape_by(\"jumping over\")\n",
+        "escape_by(\"running around\")\n",
+        "escape_by(\"cross bridge ahead\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vGXsnc-QfnIM",
+        "outputId": "a63e48c0-6e4c-4ee5-ecb6-5019bbc13c4f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "jumping over\n",
+            "We cannot escape that way ! The boulder is too big !\n",
+            "cross bridge ahead\n",
+            "That might just work ! Let's go !\n",
+            "okey\n",
+            "We cannot escape that way ! The boulder is in the way !\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# The program should start by defining a function that has the name cross_bridge and which takes 1 parameter representing the distance of the bridge crossed (in steps).\n",
+        "# The function should do the following:\n",
+        "#     Display the message \"Crossed step\" for each step crossed\n",
+        "#     If the distance is more than 5 then the message \"The bridge is collapsing!\" should be displayed.\n",
+        "#     Otherwise the message \"we must keep going!\" should be displayed.\n",
+        "# Finally, the program should contain the following calls to your cross_bridge function:\n",
+        "\n",
+        "# cross_bridge(3)\n",
+        "# cross_bridge(6)\n",
+        "\n",
+        "def cross_bridge (distance):\n",
+        "  distance = int(input())\n",
+        "  for _ in range (distance):\n",
+        "    print(\"Crossed step\")\n",
+        "  if distance > 5:\n",
+        "    print(\"The bridge is collapsing !\")\n",
+        "  else:\n",
+        "    print(\"we must keep going !\")\n",
+        "\n",
+        "cross_bridge(3)\n",
+        "cross_bridge(6)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "huhatas0hSt1",
+        "outputId": "7f6f2ebc-d332-417d-87dd-27f89a0584a6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "Crossed step\n",
+            "Crossed step\n",
+            "we must keep going !\n",
+            "4\n",
+            "Crossed step\n",
+            "Crossed step\n",
+            "Crossed step\n",
+            "Crossed step\n",
+            "we must keep going !\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# We wish to create a program to help the player climb the collapsed bridge, which is now conveniently a ladder.\n",
+        "\n",
+        "# The program should start by defining a function that has the name climb_ladder and which takes 2 parameters representing the number of steps remaining and the number of steps crossed.\n",
+        "# The function should do the following:\n",
+        "#     Compare the values of the two parameters such that if the number of steps remaining is greater than the number of steps crossed then the message \"Still some way to go!\" should be displayed.\n",
+        "#     Otherwise the message \"We are almost there!\" should be displayed.\n",
+        "# Finally, the program should contain the following calls to your climb_ladder function:\n",
+        "\n",
+        "# climb_ladder(5, 2)\n",
+        "# climb_ladder(2, 5)\n",
+        "\n",
+        "\n",
+        "def climb_ladder(steps_remaining, steps_crossed):\n",
+        "  steps_remaining = int(input())\n",
+        "  steps_crossed = int(input())\n",
+        "  if (steps_remaining) > (steps_crossed):\n",
+        "    print(\"Still some way to go !\")\n",
+        "  else:\n",
+        "    print(\"We are almost there !\")\n",
+        "\n",
+        "climb_ladder(5, 2)\n",
+        "climb_ladder(2, 5)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "a-Ul3sq8ioIZ",
+        "outputId": "93aae92f-f2d1-4113-dd72-d8524db11692"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n",
+            "5\n",
+            "We are almost there !\n",
+            "5\n",
+            "5\n",
+            "We are almost there !\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# We wish to add more functions to the text adventure program.\n",
+        "# This part should consist of the following two functions:\n",
+        "# The first function should be named display_ladder and should have one parameter steps representing the number of steps on the ladder.  This function should display an ASCII ladder with the same number of steps as the value of the parameter steps.\n",
+        "# The second function should be named create_ladder and should have no parameters.  This function should ask the user for the number of steps and then use the value in a call to the first function.\n",
+        "# Finally, the program should contain a call to the second function.\n",
+        "def display_ladder(steps):\n",
+        "    for _ in range(steps):\n",
+        "        print(\"|_|\")\n",
+        "\n",
+        "def create_ladder():\n",
+        "    steps = int(input(\"Enter number of steps: \"))\n",
+        "    display_ladder(steps)\n",
+        "\n",
+        "create_ladder()\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RGWGC4RsrRzv",
+        "outputId": "c300ee27-e947-4ed9-97ac-da6b147ed1f2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number of steps: 1\n",
+            "|_|\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# The character in the adventure is trying to distribute their weight so they can reach the top of the bridge ladder quicker. A program to help them achieve this consists of three functions as follows:\n",
+        "# The first function should be named sum_weights and should have 2 parameters. The parameters represent the weight of the character and the weight of their inventory. The function should calculate and return the total weight.\n",
+        "def sum_weights(character_weight, inventory_weight):\n",
+        "    return character_weight + inventory_weight\n",
+        "# The second function should be named calc_avg_weight and should also have 2 parameters. The parameters are the same as the previous function. The function should calculate and return the average weight of the items being weighed (person and inventory). It should do this by calling the first function and using the return value.\n",
+        "def calc_avg_weight(character_weight, inventory_weight):\n",
+        "    total_weight = sum_weights(character_weight, inventory_weight)\n",
+        "    return total_weight / 2\n",
+        "# The third function should be named run and should have 0 parameters. The function should prompt the user to enter the weight for the character and then their inventory. The function should then prompt the user to enter either the word \"sum\" or \"average\". If the user types in \"sum\" then this function should display the total weight as given by the first function ( sum_weights\"). Otherwise if the user types in \"average\" then this function should display the average weight as given by the second function ( calc_avg_weight).\n",
+        "def run():\n",
+        "    character_weight = float(input(\"Enter character weight: \"))\n",
+        "    inventory_weight = float(input(\"Enter inventory weight: \"))\n",
+        "    choice = input(\"Enter 'sum' or 'average': \")\n",
+        "    if choice == \"sum\":\n",
+        "        total_weight = sum_weights(character_weight, inventory_weight)\n",
+        "        print(\"Total weight:\", total_weight)\n",
+        "    else :\n",
+        "        avg_weight = calc_avg_weight(character_weight, inventory_weight)\n",
+        "        print(\"Average weight:\", avg_weight)s\n",
+        "\n",
+        "# The program should also contain a single call to your run function at the end of your program that looks as follows:\n",
+        "run()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5Ns-zWFYsdKV",
+        "outputId": "588d34e5-52c3-4638-88d2-19401012706b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter character weight: 10\n",
+            "Enter inventory weight: 20\n",
+            "Enter 'sum' or 'average': sum\n",
+            "Total weight: 30.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# The character has now found a map, we wish to create functions that manipulate cryptic words. The program should prompt the user to enter a word. The program should then prompt the user to choose one of the following options:\n",
+        "\n",
+        "# 1) Display in a Box – display the word in an ASCII art box\n",
+        "# 2) Display Lower-case – display the word in lower-case e.g. hello\n",
+        "# 3) Display Upper-case – display the word in upper-case e.g. HELLO\n",
+        "# 4) Display Mirrored – display the word with its mirrored word e.g. Hello | olleH\n",
+        "# 5) Repeat – ask the user how many times to display the word and then display the word that many times alternating between upper-case and lower-case.\n",
+        "\n",
+        "# The program should then read the option number entered by the user and carry out the appropriate actions.\n",
+        "\n",
+        "# The program should contain 6 user-defined functions. One for each of the above options and one to run the program.\n",
+        "def display_box(word):\n",
+        "    length = len(word)\n",
+        "    print(\"*\" * (length + 4))\n",
+        "    print(\"* \" + word + \" *\")\n",
+        "    print(\"*\" * (length + 4))\n",
+        "\n",
+        "\n",
+        "def display_lower(word):\n",
+        "    print(word.lower())\n",
+        "\n",
+        "\n",
+        "def display_upper(word):\n",
+        "    print(word.upper())\n",
+        "\n",
+        "\n",
+        "def display_mirrored(word):\n",
+        "    print(word + \" | \" + word[::-1])\n",
+        "\n",
+        "\n",
+        "def repeat_word(word):\n",
+        "    times = int(input(\"How many times? \"))\n",
+        "    for i in range(times):\n",
+        "        if i % 2 == 0:\n",
+        "            print(word.upper())\n",
+        "        else:\n",
+        "            print(word.lower())\n",
+        "\n",
+        "\n",
+        "def run():\n",
+        "    word = input(\"Enter a word: \")\n",
+        "\n",
+        "    print(\"1) Display in a Box\")\n",
+        "    print(\"2) Display Lower-case\")\n",
+        "    print(\"3) Display Upper-case\")\n",
+        "    print(\"4) Display Mirrored\")\n",
+        "    print(\"5) Repeat\")\n",
+        "\n",
+        "    option = input(\"Choose an option: \")\n",
+        "\n",
+        "    if option == \"1\":\n",
+        "        display_box(word)\n",
+        "    elif option == \"2\":\n",
+        "        display_lower(word)\n",
+        "    elif option == \"3\":\n",
+        "        display_upper(word)\n",
+        "    elif option == \"4\":\n",
+        "        display_mirrored(word)\n",
+        "    elif option == \"5\":\n",
+        "        repeat_word(word)\n",
+        "\n",
+        "\n",
+        "# Run the program\n",
+        "run()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "379M_Q_UufJL",
+        "outputId": "926dab57-43b7-49a5-cdc8-63f755e8f132"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a word: box\n",
+            "1) Display in a Box\n",
+            "2) Display Lower-case\n",
+            "3) Display Upper-case\n",
+            "4) Display Mirrored\n",
+            "5) Repeat\n",
+            "Choose an option: 3\n",
+            "BOX\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "BbLrqeKQ2Oo0"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
